@@ -15,7 +15,7 @@ sudo git add -A
 sudo git commit -m 'deploy'
 
 # 如果发布到 https://<USERNAME>.github.io
-sudo git push -f git@github.com:berlinen/Blog.git master:gh-pages
+sudo git push -f git@github.com:berlinen/department-blog.git master:gh-pages
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
