@@ -1,14 +1,14 @@
 module.exports = {
   title: "部门博客",
   description: 'study programs and record life',
-  base: '/department-blog/',
+  base: '/blog/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
     ['meta', { name: 'viewport', content: 'width=device-width,initial-scale=1,user-scalable=no' }]
   ],
   theme: 'reco',
   themeConfig: {
-    type: 'department-blog',
+    type: 'blog',
     huawei: false,
     displayAllHeaders: true,
     nav: [
@@ -31,7 +31,7 @@ module.exports = {
       },
       tag: {
         location: 3, // 在导航栏菜单中所占的位置，默认3
-        text: '标签' // 默认 “标签”
+        text: '标签' // 默认 “标签”gaa
       }
     },
     logo: '/head.png',
