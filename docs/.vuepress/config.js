@@ -1,7 +1,7 @@
 module.exports = {
   title: "部门博客",
   description: 'study programs and record life',
-  base: '/blog/',
+  base: '/department-blog/',
   dest: 'dist',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
