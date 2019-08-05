@@ -1,6 +1,6 @@
 ---
 home: true
-bgImage: 'https://desk-fd.zol-img.com.cn/t_s1024x768c5/g3/M04/0B/06/Cg-4V1Q_K_2IS20UAAvKmTmHyYIAAQLGwOZI-YAC8qx308.jpg'
+bgImage: 'https://desk-fd.zol-img.com.cn/t_s1366x768c5/g5/M00/0C/08/ChMkJlwjWCuINj10AAWyQ_9YkrkAAuAJwA1l5kABbJb880.jpg'
 bgImageStyle: {
   height: '500px'
 }
