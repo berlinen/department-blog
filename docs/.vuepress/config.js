@@ -1,6 +1,6 @@
 module.exports = {
   title: "部门博客",
-  description: 'study programs and record life',
+  description: 'Department blog',
   base: '/department-blog/',
   dest: 'dist',
   head: [
