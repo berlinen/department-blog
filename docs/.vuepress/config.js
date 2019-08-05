@@ -8,7 +8,7 @@ module.exports = {
   ],
   theme: 'reco',
   themeConfig: {
-    type: 'blog',
+    type: 'department-blog',
     huawei: false,
     displayAllHeaders: true,
     nav: [
