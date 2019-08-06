@@ -56,12 +56,12 @@ export default {
     body.appendChild(script);
     script.onload = () => {
       const commentConfig = {
-        clientID: 'YOUR_CLINENT_ID',
-        clientSecret: 'YOUR_CLINENT_SECRET',
-        repo: '此仓库的名称',
-        owner: '你的 GitHub 用户名，注意是用户名！！！',
+        clientID: '74950a0af874ae59e2fb',
+        clientSecret: '890ecf4b46af5343af4453d75eaa9009de59f5f7',
+        repo: 'departBlog',
+        owner: 'berlinen',
         // 这里接受一个数组，可以添加多个管理员
-        admin: ['你的 GitHub 用户名'],
+        admin: ['berlinen'],
         // id 用于当前页面的唯一标识，一般来讲 pathname 足够了，
 
         // 但是如果你的 pathname 超过 50 个字符，GitHub 将不会成功创建 issue，此情况可以考虑给每个页面生成 hash 值的方法.
@@ -75,7 +75,3 @@ export default {
 };
 </script>
 
-作者：YanceyOfficial
-链接：https://juejin.im/post/5c9e30fb6fb9a05e1c4cecf6
-来源：掘金
-著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
