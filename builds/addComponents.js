@@ -1,3 +1,4 @@
+/* eslint-disable */
 const fs = require('fs')
 const findMarkdown = require('./findMarkdown')
 const rootDir = './docs'
