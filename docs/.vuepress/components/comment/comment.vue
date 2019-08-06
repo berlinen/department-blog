@@ -616,7 +616,7 @@ export default {
         repo: 'department-blog',
         owner: 'berlinen',
         admin: ['berlinen'],
-        id: location.pathname,
+        id: md5(location.href),
         distractionFreeMode: false,
       };
       const gitalk = new Gitalk(commentConfig);
