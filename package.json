@@ -5,10 +5,12 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "build:comment": "node ./builds/addComponents.js && vuepress build docs && node ./builds/delComponents.js",
     "deploy": "sh deploy.sh"
   },
   "author": "zsw",
   "dependencies": {
+    "gitalk": "^1.5.0",
     "vuepress-theme-reco": "^1.0.4"
   },
   "devDependencies": {
