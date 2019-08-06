@@ -599,6 +599,8 @@ $gt-size-avatar-mobi = em(32px);
   </div>
 </template>
 <script>
+import md5 from 'md5'
+
 export default {
   name: 'comment',
   data() {
