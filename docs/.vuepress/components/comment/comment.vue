@@ -1,41 +1,3 @@
-<template>
-  <div class="gitalk-container">
-    <div id="gitalk-container"></div>
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'comment',
-  data() {
-    return {};
-  },
-  mounted() {
-    let body = document.querySelector('.gitalk-container');
-    let script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js';
-    body.appendChild(script);
-    script.onload = () => {
-      const commentConfig = {
-        clientID: '74950a0af874ae59e2fb',
-        clientSecret: '890ecf4b46af5343af4453d75eaa9009de59f5f7',
-        repo: 'departBlog',
-        owner: 'berlinen',
-        // 这里接受一个数组，可以添加多个管理员
-        admin: ['berlinen'],
-        // id 用于当前页面的唯一标识，一般来讲 pathname 足够了，
-
-        // 但是如果你的 pathname 超过 50 个字符，GitHub 将不会成功创建 issue，此情况可以考虑给每个页面生成 hash 值的方法.
-        id: location.pathname,
-        distractionFreeMode: false,
-      };
-      const gitalk = new Gitalk(commentConfig);
-      gitalk.render('gitalk-container');
-    };
-  },
-};
-</script>
-
 <style lang="stylus" rel="stylesheet/stylus">
 /* variables */
 $gt-color-main = #00adb5;
@@ -55,89 +17,111 @@ $gt-size-base = 16px; // default font-size
 $gt-size-border-radius = 5px;
 $gt-breakpoint-mobile = 479px;
 $gt-mask-z-index = 9999;
+
 /* functions & mixins */
 clearfix() {
   &:before, &:after {
     content: ' ';
     display: table;
   }
+
   &:after {
     clear: both;
   }
 }
+
 em($px, $base-size = $gt-size-base) {
   u = unit($px);
+
   if (u == 'px') {
     unit(($px / $base-size), 'em');
   } else {
     unit($px, u);
   }
 }
+
 mobile() {
   @media (max-width: $gt-breakpoint-mobile) {
     {block};
   }
 }
+
 /* variables - calculated */
 $gt-size-loader-dot = em(6px);
 $gt-size-loader = em(28px);
 $gt-size-avatar = em(50px);
 $gt-size-avatar-mobi = em(32px);
+
 /* styles */
 .gt-container {
   box-sizing: border-box;
+
   * {
     box-sizing: border-box;
   }
+
   font-size: $gt-size-base;
+
   // common
   a {
     color: $gt-color-main;
+
     &:hover {
       color: lighten($gt-color-main, 20%);
       border-color: lighten($gt-color-main, 20%);
     }
+
     &.is--active {
       color: $gt-color-link-active;
       cursor: default !important;
+
       &:hover {
         color: $gt-color-link-active;
       }
     }
   }
+
   .hide {
     display: none !important;
   }
+
   // icons
   .gt-svg {
     display: inline-block;
     width: em(16px);
     height: em(16px);
     vertical-align: sub;
+
     svg {
       width: 100%;
       height: 100%;
       fill: $gt-color-main;
     }
   }
+
   .gt-ico {
     display: inline-block;
+
     &-text {
       margin-left: em(5px);
     }
+
     &-github {
       .gt-svg {
         width: 100%;
         height: 100%;
       }
+
       svg {
         fill: inherit;
       }
     }
   }
+
   /* loader */
   .gt-spinner {
     position: relative;
+
     &::before {
       content: '';
       box-sizing: border-box;
@@ -153,6 +137,7 @@ $gt-size-avatar-mobi = em(32px);
       animation: gt-kf-rotate 0.6s linear infinite;
     }
   }
+
   .gt-loader {
     position: relative;
     border: 1px solid $gt-color-loader;
@@ -164,6 +149,7 @@ $gt-size-avatar-mobi = em(32px);
     // font-size: $gt-size-loader
     line-height: $gt-size-loader;
     border-radius: 50%;
+
     &:before {
       content: '';
       position: absolute;
@@ -178,29 +164,35 @@ $gt-size-avatar-mobi = em(32px);
       border-radius: 50%;
     }
   }
+
   // avatar
   .gt-avatar {
     display: inline-block;
     width: $gt-size-avatar;
     height: $gt-size-avatar;
+
     +mobile() {
       width: $gt-size-avatar-mobi;
       height: $gt-size-avatar-mobi;
     }
+
     img {
       width: 100%;
       height: auto;
       border-radius: 3px;
     }
+
     &-github {
       width: $gt-size-avatar - em(2px);
       height: $gt-size-avatar - em(2px);
+
       +mobile() {
         width: $gt-size-avatar-mobi - em(2px);
         height: $gt-size-avatar-mobi - em(2px);
       }
     }
   }
+
   // button
   .gt-btn {
     padding: em(12px) em(20px);
@@ -215,9 +207,11 @@ $gt-size-avatar-mobi = em(32px);
     color: $gt-color-btn;
     outline: none;
     font-size: em(12px);
+
     &-text {
       font-weight: 400;
     }
+
     &-loading {
       position: relative;
       margin-left: em(8px);
@@ -226,58 +220,71 @@ $gt-size-avatar-mobi = em(32px);
       height: em(16px);
       vertical-align: top;
     }
+
     &.is--disable {
       cursor: not-allowed;
       opacity: 0.5;
     }
+
     &-login {
       margin-right: 0;
     }
+
     &-preview {
       background-color: $gt-color-btn;
       color: $gt-color-main;
+
       &:hover {
         background-color: darken($gt-color-btn, 5%);
         border-color: lighten($gt-color-main, 20%);
       }
     }
+
     &-public {
       &:hover {
         background-color: lighten($gt-color-main, 20%);
         border-color: lighten($gt-color-main, 20%);
       }
     }
+
     &-loadmore {
       // loadmore
     }
   }
+
   /* error */
   .gt-error {
     text-align: center;
     margin: em(10px);
     color: $gt-color-error;
   }
+
   /* initing */
   .gt-initing {
     padding: em(20px) 0;
     text-align: center;
+
     &-text {
       margin: em(10px) auto;
       font-size: 92%;
     }
   }
+
   /* no int */
   .gt-no-init {
     padding: em(20px) 0;
     text-align: center;
   }
+
   /* link */
   .gt-link {
     border-bottom: 1px dotted $gt-color-main;
+
     &-counts, &-project {
       text-decoration: none;
     }
   }
+
   /* meta */
   .gt-meta {
     margin: em(20px) 0;
@@ -289,29 +296,36 @@ $gt-size-avatar-mobi = em(32px);
     z-index: 9;
     clearfix();
   }
+
   .gt-counts {
     margin: 0 em(10px) 0 0;
   }
+
   .gt-user {
     float: right;
     margin: 0;
     font-size: 92%;
+
     &-pic {
       width: 16px;
       height: 16px;
       vertical-align: top;
       margin-right: em(8px);
     }
+
     &-inner {
       display: inline-block;
       cursor: pointer;
     }
+
     .gt-ico {
       margin: 0 0 0 em(5px);
+
       svg {
         fill: inherit;
       }
     }
+
     .is--poping {
       .gt-ico {
         svg {
@@ -320,15 +334,18 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
   }
+
   .gt-version {
     color: $gt-color-sub;
     margin-left: em(6px);
   }
+
   .gt-copyright {
     margin: 0 em(15px) em(8px);
     border-top: 1px solid $gt-color-hr;
     padding-top: em(8px);
   }
+
   /* popup */
   .gt-popup {
     position: absolute;
@@ -340,6 +357,7 @@ $gt-size-avatar-mobi = em(32px);
     padding: em(10px) 0;
     font-size: em(14px);
     letter-spacing: 0.5px;
+
     .gt-action {
       cursor: pointer;
       display: block;
@@ -347,6 +365,7 @@ $gt-size-avatar-mobi = em(32px);
       padding: 0 em(18px);
       position: relative;
       text-decoration: none;
+
       &.is--active {
         &:before {
           content: '';
@@ -360,17 +379,21 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
   }
+
   /* header */
   .gt-header {
     position: relative;
     display: flex;
+
     &-comment {
       flex: 1;
       margin-left: em(20px);
+
       +mobile() {
         margin-left: em(14px);
       }
     }
+
     &-textarea {
       padding: em(12px);
       display: block;
@@ -386,36 +409,44 @@ $gt-size-avatar-mobi = em(32px);
       background-color: $gt-color-input-bg;
       outline: none;
       transition: all 0.25s ease;
+
       &:hover {
         background-color: lighten($gt-color-input-bg, 50%);
         // box-shadow: 0 em(10px) em(60px) 0 $gt-color-input-bg
       }
     }
+
     &-preview {
       padding: em(12px);
       border-radius: $gt-size-border-radius;
       border: 1px solid $gt-color-input-border;
       background-color: $gt-color-input-bg;
     }
+
     &-controls {
       position: relative;
       margin: em(12px) 0 0;
       clearfix();
+
       +mobile() {
         margin: 0;
       }
+
       &-tip {
         font-size: em(14px);
         color: $gt-color-main;
         text-decoration: none;
         vertical-align: sub;
+
         +mobile() {
           display: none;
         }
       }
+
       .gt-btn {
         float: right;
         margin-left: em(20px);
+
         +mobile() {
           float: none;
           width: 100%;
@@ -424,6 +455,7 @@ $gt-size-avatar-mobi = em(32px);
       }
     }
   }
+
   &:after {
     content: '';
     position: fixed;
@@ -433,8 +465,10 @@ $gt-size-avatar-mobi = em(32px);
     top: 0;
     opacity: 0;
   }
+
   &.gt-input-focused {
     position: relative;
+
     &:after {
       content: '';
       position: fixed;
@@ -447,26 +481,32 @@ $gt-size-avatar-mobi = em(32px);
       transition: opacity 0.3s, bottom 0s;
       z-index: $gt-mask-z-index;
     }
+
     .gt-header-comment {
       z-index: $gt-mask-z-index + 1;
     }
   }
+
   /* comments */
   .gt-comments {
     padding-top: em(20px);
+
     &-null {
       text-align: center;
     }
+
     &-controls {
       margin: em(20px) 0;
       text-align: center;
     }
   }
+
   /* comment */
   .gt-comment {
     position: relative;
     padding: em(10px) 0;
     display: flex;
+
     &-content {
       flex: 1;
       margin-left: em(20px);
@@ -474,53 +514,66 @@ $gt-size-avatar-mobi = em(32px);
       background-color: $gt-color-comment-bg;
       overflow: auto;
       transition: all ease 0.25s;
+
       &:hover {
         box-shadow: 0 em(10px) em(60px) 0 darken($gt-color-comment-bg, 2%);
       }
+
       +mobile() {
         margin-left: em(14px);
         padding: em(10px) em(12px);
       }
     }
+
     &-header {
       margin-bottom: em(8px);
       font-size: em(14px);
       position: relative;
     }
+
     &-username {
       font-weight: 500;
       color: $gt-color-main;
       text-decoration: none;
+
       &:hover {
         text-decoration: underline;
       }
     }
+
     &-text {
       margin-left: em(8px);
       color: $gt-color-sub;
     }
+
     &-date {
       margin-left: em(8px);
       color: $gt-color-sub;
     }
+
     &-like, &-edit, &-reply {
       position: absolute;
       height: em(22px);
+
       &:hover {
         cursor: pointer;
       }
     }
+
     &-like {
       top: 0;
       right: em(32px);
     }
+
     &-edit, &-reply {
       top: 0;
       right: 0;
     }
+
     &-body {
       color: $gt-color-comment-txt !important;
     }
+
     &-admin {
       .gt-comment-content {
         background-color: $gt-color-comment-adminbg;
@@ -528,13 +581,47 @@ $gt-size-avatar-mobi = em(32px);
     }
   }
 }
+
 @keyframes gt-kf-rotate {
   0% {
     transform: rotate(0);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
 </style>
 
+<template>
+  <div class="gitalk-container">
+    <div id="gitalk-container"></div>
+  </div>
+</template>
+<script>
+export default {
+  name: 'comment',
+  data() {
+    return {};
+  },
+  mounted() {
+    let body = document.querySelector('.gitalk-container');
+    let script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js';
+    body.appendChild(script);
+    script.onload = () => {
+      const commentConfig = {
+        clientID: '74950a0af874ae59e2fb',
+        clientSecret: '890ecf4b46af5343af4453d75eaa9009de59f5f7',
+        repo: 'department-blog',
+        owner: 'berlinen',
+        admin: ['berlinen'],
+        id: location.pathname,
+        distractionFreeMode: false,
+      };
+      const gitalk = new Gitalk(commentConfig);
+      gitalk.render('gitalk-container');
+    };
+  },
+};
+</script>
