@@ -2,14 +2,14 @@
 title: Vue-cli3中的前端单元测试之环境搭建
 date: 2019-07-18
 sidebar: auto
-tags: 
+tags:
  - 单元测试
 categories:
  - 前端
 ---
 
-> 本文中所用到的测试工具如下  
-> kmci: karma + mocha + chai + istanbul  
+> 本文中所用到的测试工具如下
+> kmci: karma + mocha + chai + istanbul
 > 此文只涉及在vue-cli3中如何集成以上工具，不再详细介绍各个工具
 
 <!-- more -->
