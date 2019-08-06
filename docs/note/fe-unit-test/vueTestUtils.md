@@ -347,3 +347,6 @@ wrapper.vm.$route.path // /some/path
   Getter、mutation 和 action 全部是 js 函数，所以我们可以不通过 Vue Test Utils 和 Vuex 测试它们。
   分别测试 getter、mutation 和 action 的好处是你的单元测试是非常详细的。当它们失败时，你完全知道你代码的问题是什么。当然另外一方面你需要伪造诸如 `commit` 和 `dispatch` 的 Vuex 函数。这会导致在一些情况下你伪造错了东西，导致单元测试通过，生产环境的代码却失败了。
 - 这样做的好处是我们不需要伪造任何 Vuex 函数。另一方面当一个测试失败时，排查问题的难度会增加。
+ 
+ <comment-comment/> 
+ 

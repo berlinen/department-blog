@@ -17,6 +17,7 @@
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.0.2",
     "vuepress": "^1.0.2",
-    "vuepress-plugin-flowchart": "^1.4.3"
+    "vuepress-plugin-flowchart": "^1.4.3",
+    "vuepress-plugin-yuque": "^0.6.0"
   }
 }

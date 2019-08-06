@@ -35,6 +35,7 @@ module.exports = {
         text: '标签' // 默认 “标签”gaa
       }
     },
+    // 语雀相关配置
     logo: '/head.png',
     // 搜索设置
     search: true,
@@ -92,5 +93,7 @@ module.exports = {
   markdown: {
     lineNumbers: true
   },
-  plugins: ['@vuepress/medium-zoom', 'flowchart']
+  plugins: [
+    '@vuepress/medium-zoom',
+    'flowchart']
 }

@@ -260,3 +260,6 @@ expect和should是BDD风格的，二者使用相同的链式语言来组织断�
 - .frozen：断言目标对象是冻结的（无法添加新的属性并且存在的属性不能被删除和修改）
 
 ## [TDD](https://www.chaijs.com/api/assert/)
+ 
+ <comment-comment/> 
+ 
