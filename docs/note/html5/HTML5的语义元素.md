@@ -124,7 +124,3 @@ title: HTML5语义元素
 6.表单域要用fieldset标签包起来，并用legend标签说明表单的用途；
 
 7.每个input标签对应的说明文本都需要使用label标签，并且通过为input设置id属性，在lable标签中设置for=someld来让说明文本和相对应的input关联起来。
-
- 
- <comment-comment/> 
- 

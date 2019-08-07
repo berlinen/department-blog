@@ -78,6 +78,7 @@ module.exports = {
   plugins: [
     [
       'vuepress-plugin-yuque', {
+        html: true,
         repoUrl: 'https://souche.yuque.com/souche_blog/hxqhhs',
         authToken: 'm3DjDKg7PQVrORVj6ClSpLUjXX2toG8CtwtBLRsO'
       }

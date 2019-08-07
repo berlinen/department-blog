@@ -55,6 +55,3 @@ title: HTML5多媒体标签
 ### 浏览器支持
 
 ![](http://zsw0407.gitee.io/images/images/blog/H5/video_explorer.png)
- 
- <comment-comment/> 
- 
