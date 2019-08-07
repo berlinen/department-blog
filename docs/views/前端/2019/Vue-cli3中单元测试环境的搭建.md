@@ -1,6 +1,6 @@
 ---
 title: Vue-cli3中的前端单元测试之环境搭建
-date: 2019-07-18
+date: 2019-08-06
 sidebar: auto
 tags:
  - 单元测试
@@ -255,8 +255,6 @@ package.json
 
 ## 相关链接
 
-[练习项目](https://github.com/smallsunnyfox/frontend-unit-test)
-
 [Istanbul官网](https://istanbul.js.org/)
 
 [Mocha中文文档](https://segmentfault.com/a/1190000011362879#articleHeader4)
@@ -272,6 +270,5 @@ package.json
 [Vue组件的单元测试](https://cn.vuejs.org/v2/cookbook/unit-testing-vue-components.html)
 
 [Testing Vue.js Applications](https://cn.vuejs.org/v2/cookbook/unit-testing-vue-components.html)
- 
- <comment-comment/> 
- 
+
+ <comment-comment/>
