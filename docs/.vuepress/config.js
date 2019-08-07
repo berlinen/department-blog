@@ -95,5 +95,21 @@ module.exports = {
   },
   plugins: [
     '@vuepress/medium-zoom',
-    'flowchart']
+    'flowchart',
+    [
+      'vuepress-plugin-yuque', {
+        repoUrl: 'https://souche.yuque.com/souche_blog/hxqhhs',
+
+        authToken: 'm3DjDKg7PQVrORVj6ClSpLUjXX2toG8CtwtBLRsO'
+      }
+    ]
+   ]
 }
+
+/**
+ *  // 'vuepress-plugin-yuque', {
+    //   repoUrl: 'https://souche.yuque.com/souche_blog/hxqhhs',
+    //   html: true,
+    //   authToken: 'm3DjDKg7PQVrORVj6ClSpLUjXX2toG8CtwtBLRsO'
+    // }
+ */
