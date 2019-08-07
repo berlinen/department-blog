@@ -71,45 +71,18 @@ module.exports = {
     // record: 'xxxx',
     // 项目开始时间
     startYear: '2018'
-    /**
-     * 密钥 (if your blog is private)
-     */
-
-    // keyPage: {
-    //   keys: ['your password'],
-    //   color: '#42b983',
-    //   lineColor: '#42b983'
-    // },
-
-    /**
-     * valine 设置 (if you need valine comment )
-     */
-
-    // valineConfig: {
-    //   appId: '...',// your appId
-    //   appKey: '...', // your appKey
-    // }
   },
   markdown: {
     lineNumbers: true
   },
   plugins: [
-    '@vuepress/medium-zoom',
-    'flowchart',
     [
       'vuepress-plugin-yuque', {
         repoUrl: 'https://souche.yuque.com/souche_blog/hxqhhs',
-
         authToken: 'm3DjDKg7PQVrORVj6ClSpLUjXX2toG8CtwtBLRsO'
       }
-    ]
+    ],
+    '@vuepress/medium-zoom',
+    'flowchart'
    ]
 }
-
-/**
- *  // 'vuepress-plugin-yuque', {
-    //   repoUrl: 'https://souche.yuque.com/souche_blog/hxqhhs',
-    //   html: true,
-    //   authToken: 'm3DjDKg7PQVrORVj6ClSpLUjXX2toG8CtwtBLRsO'
-    // }
- */
