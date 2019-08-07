@@ -31,11 +31,11 @@
 
 博客搭建工具: [VuePress](https://vuepress.vuejs.org/zh/)
 
-github: [金融前端组](https://github.com/orgs/souche-finance-wireless/dashboard)
+github-org: [Team](https://github.com/orgs/souche-finance-wireless/dashboard)
 
-语雀: [金融前端组](https://souche.yuque.com/souche_blog/hxqhhs)
+语雀: [团队语雀](https://souche.yuque.com/souche_blog/hxqhhs)
 
-关于我们: [金融前端组](https://souche.yuque.com/bggh1p/front-end/gopevv)
+关于我们: [团队介绍](https://souche.yuque.com/bggh1p/front-end/gopevv)
 
 
 
