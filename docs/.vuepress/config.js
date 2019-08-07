@@ -53,7 +53,21 @@ module.exports = {
     // 备案号
     // record: 'xxxx',
     // 项目开始时间
-    startYear: '2018'
+    startYear: '2018',
+    // 假定是 GitHub. 同时也可以是一个完整的 GitLab URL
+    repo: 'https://github.com/berlinen/department-blog/',
+    // 自定义仓库链接文字。默认从 `themeConfig.repo` 中自动推断为
+    // "GitHub"/"GitLab"/"Bitbucket" 其中之一，或是 "Source"。
+     // 假如文档不是放在仓库的根目录下：
+    docsDir: 'docs',
+     // 假如文档放在一个特定的分支下：
+    docsBranch: 'master',
+
+    repoLabel: '查看源码',
+    // 默认是 false, 设置为 true 来启用
+    editLinks: true,
+    // 默认为 "Edit this page"
+    editLinkText: '帮助我们改善此页面！'
   },
   markdown: {
     lineNumbers: true
