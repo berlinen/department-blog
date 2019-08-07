@@ -1,5 +1,5 @@
 module.exports = {
-  title: "部门博客",
+  title: "金融前端组",
   description: 'Department blog',
   base: '/department-blog/',
   dest: 'dist',
@@ -66,7 +66,7 @@ module.exports = {
     // 最后更新时间
     lastUpdated: 'Last Updated',
     // 作者
-    author: 'Dasouche',
+    author: '金融前端组',
     // 备案号
     // record: 'xxxx',
     // 项目开始时间
