@@ -44,24 +44,7 @@ module.exports = {
     sidebarDepth: 1,
     displayAllHeaders: false,
     sidebar: [
-      {
-        title: 'HTML5',
-        collapsable: true,
-        children: [
-          '/note/html5/HTML5的语义元素',
-          '/note/html5/HTML5多媒体标签',
-          '/note/html5/HTML5表单元素'
-        ]
-      },
-      {
-        title: '前端单元测试',
-        collapsable: true,
-        children: [
-          '/note/fe-unit-test/chai',
-          '/note/fe-unit-test/mocha',
-          '/note/fe-unit-test/vueTestUtils'
-        ]
-      }
+      // 自定义导航栏
     ],
     // 最后更新时间
     lastUpdated: 'Last Updated',
